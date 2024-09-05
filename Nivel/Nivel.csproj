@@ -45,20 +45,25 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="ZcWindows">
-      <HintPath>G:\Drives compartilhados\OSM  compartilhado - Equipe\EQUIPE\WILLIAM\Programas\ObjectArx SDK 2025\ZWCAD_2023_ZRXSDK\inc\ZcWindows.dll</HintPath>
+    <Reference Include="ZcWindows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ZcWindows.dll</HintPath>
     </Reference>
-    <Reference Include="ZdWindows">
-      <HintPath>G:\Drives compartilhados\OSM  compartilhado - Equipe\EQUIPE\WILLIAM\Programas\ObjectArx SDK 2025\ZWCAD_2023_ZRXSDK\inc\ZdWindows.dll</HintPath>
+    <Reference Include="ZdWindows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ZdWindows.dll</HintPath>
     </Reference>
-    <Reference Include="ZwDatabaseMgd">
-      <HintPath>G:\Drives compartilhados\OSM  compartilhado - Equipe\EQUIPE\WILLIAM\Programas\ObjectArx SDK 2025\ZWCAD_2023_ZRXSDK\inc\ZwDatabaseMgd.dll</HintPath>
+    <Reference Include="ZwDatabaseMgd, Version=23.0.23.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ZwDatabaseMgd.dll</HintPath>
     </Reference>
-    <Reference Include="ZwDatabaseMgdBrep">
-      <HintPath>G:\Drives compartilhados\OSM  compartilhado - Equipe\EQUIPE\WILLIAM\Programas\ObjectArx SDK 2025\ZWCAD_2023_ZRXSDK\inc\ZwDatabaseMgdBrep.dll</HintPath>
+    <Reference Include="ZwDatabaseMgdBrep, Version=23.0.23.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ZwDatabaseMgdBrep.dll</HintPath>
     </Reference>
-    <Reference Include="ZwManaged">
-      <HintPath>G:\Drives compartilhados\OSM  compartilhado - Equipe\EQUIPE\WILLIAM\Programas\ObjectArx SDK 2025\ZWCAD_2023_ZRXSDK\inc\ZwManaged.dll</HintPath>
+    <Reference Include="ZwManaged, Version=23.0.23.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ZwManaged.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
