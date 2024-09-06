@@ -59,7 +59,16 @@
     <Grid>
         <TabControl MouseLeftButtonDown="Tabcontrol_MouseLeftButtonDown" Background="#FF1F1F21" BorderBrush="#FF757575">
             <TabItem Header="Home" Foreground="White">
-                <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
                     <!-- StackPanel para checkboxes -->
                     <StackPanel x:Name="CheckboxPanel" Margin="5">
                         <RadioButton x:Name="OnlyText_RB" Content="Only Text" IsChecked="True" Margin="2" Foreground="White" GroupName="State"
@@ -69,13 +78,28 @@
                         <RadioButton x:Name="SubstituteText_RB" Content="Substitute text" IsChecked="False" Margin="2" Checked="SubstituteText_Checked"
                                    GroupName="State" Foreground="White" />
                     </StackPanel>
-
+                    
+                    <!-- Aqui decide qual texto acompanhara o Level -->
+                    <StackPanel Grid.Column="1">
+                        <Label Content="Label" HorizontalAlignment="Center" Foreground="White"/>
+                        
+                        <!-- Default options -->
+                        <ComboBox x:Name="label" IsEditable="True" SelectionChanged="label_SelectionChanged" Loaded="label_Loaded">
+                            <ComboBoxItem IsSelected="True">N.Terreno</ComboBoxItem>
+                            <ComboBoxItem>N.Topo</ComboBoxItem>
+                            <ComboBoxItem>N.Fundo</ComboBoxItem>
+                            <ComboBoxItem>N.Calçada</ComboBoxItem>
+                            <ComboBoxItem>N.A.Max</ComboBoxItem>
+                            <ComboBoxItem>N.A.Min</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    
                     <!-- StackPanel para Infos-->
-                    <StackPanel x:Name="InfoPanel" Margin="5">
+                    <StackPanel x:Name="InfoPanel" Margin="5" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Name="CurrentScale_TB" Text="Scale: None detected."/>
                         <TextBlock Name="CurrentCoords_TB" Text="Level: None detected."/>
                     </StackPanel>
-                </StackPanel>
+                </Grid>
             </TabItem>
             <TabItem Header="Info" Foreground="White">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">

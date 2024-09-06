@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -35,6 +36,28 @@ namespace Nivel
             if (e.ChangedButton == MouseButton.Left)
             {
                 this.DragMove();
+            }
+        }
+
+        private void label_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (label.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedValue = selectedItem.Content?.ToString();
+
+                if (selectedItem != null)
+                    Main.Label = selectedValue;
+            }
+        }
+
+        private void label_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (label.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedValue = selectedItem.Content?.ToString();
+
+                if (selectedItem != null)
+                    Main.Label = selectedValue;
             }
         }
     }

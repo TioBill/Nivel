@@ -30,6 +30,7 @@ namespace Nivel
         public static PromptDoubleResult LevelRes { get; set; }
         public static double ScaleValue { get; set; }
         public static bool CanCapture { get; set; }
+        public static string Label { get; set; }
 
         private static void StartProgram()
         {
@@ -132,6 +133,8 @@ namespace Nivel
 
         private static void ChangeText(PromptEntityResult newText, string level)
         {
+            if (Label != null)
+                level = Label + "=" + level;
 
             using (Transaction trans = currentDwg.AcDocument.TransactionManager.StartTransaction())
             {
@@ -226,6 +229,9 @@ namespace Nivel
 
         private static void PutText(Point3d textPosition, string level, double textHeight)
         {
+            if (Label != null)
+                level = Label + "=" + level;
+
             textPosition = textPosition.TransformBy(currentDwg.UCS);
 
             using (Transaction trans = currentDwg.AcDocument.TransactionManager.StartTransaction())
